@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="logo.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+            <Entry Placeholder="Introduce primer valor" HorizontalOptions="Center" WidthRequest="180" x:Name="primerValor" >
+                
+            </Entry>
+            <Entry Placeholder="Introduce segundo valor" HorizontalOptions="Center" WidthRequest="180" x:Name="segundoValor">
+        
+            </Entry>
+
+            <Button
+                x:Name="Operaciones"
+                Text="Calcular"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="Operaciones_Clicked"
+                HorizontalOptions="Center" />
+
+            <Label Text="" x:Name="error" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="Suma: " x:Name="suma"/>
+            <Label Text="Resta: " x:Name="resta"/>
+            <Label Text="Multiplicación: " x:Name="multiplicacion"/>
+            <Label Text="División: " x:Name="division"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
